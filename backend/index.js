@@ -8,6 +8,13 @@ const path=require("path");
 const cors=require("cors");
 const { error } = require("console");
 
+app.use(cors(
+  {
+    origin:["https://deploy-mern-lwhq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
 
 app.use(express.json());
 app.use(cors());
